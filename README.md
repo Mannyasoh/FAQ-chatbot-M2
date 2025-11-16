@@ -18,7 +18,7 @@ A production-ready Retrieval-Augmented Generation (RAG) system for answering HR-
 
 ```bash
 # Clone and navigate to the project
-cd assignment-m2
+cd FAQ-chatbot-M2
 
 # Install dependencies
 pip install -r requirements.txt
@@ -60,7 +60,7 @@ python -m src.query "What happens if I work overtime?" --output response.json
 ## Project Structure
 
 ```
-assignment-m2/
+FAQ-chatbot-M2/
 ├── src/                          # Core source code
 │   ├── build_index.py           # Data pipeline for building hybrid search index
 │   ├── query.py                 # Query pipeline for answering questions
