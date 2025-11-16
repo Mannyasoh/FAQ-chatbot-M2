@@ -48,7 +48,7 @@ class RAGConfig(BaseModel):
     max_cost_per_query: float = Field(
         default=1.0, description="Maximum cost per query in USD"
     )
-    max_daily_cost: float = Field(default=50.0, description="Maximum daily cost in USD")
+    max_daily_cost: float = Field(default=5.0, description="Maximum daily cost in USD")
     data_dir: Path = Field(default=Path("data"), description="Data directory")
     index_dir: Path = Field(
         default=Path("data/index"), description="Index storage directory"

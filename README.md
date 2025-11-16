@@ -302,7 +302,7 @@ This project uses:
 
 - **Embedding**: ~\$0.00002 per query (text-embedding-3-small)
 - **Generation**: ~\$0.002 per query (gpt-4o-mini, avg response)
-- **Daily Limit**: \$50 (configurable)
+- **Daily Limit**: \$5 (configurable)
 
 ### Optimization Strategies
 
