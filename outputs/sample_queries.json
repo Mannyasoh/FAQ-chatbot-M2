@@ -1,0 +1,121 @@
+[
+  {
+    "user_question": "What is the company's vacation policy?",
+    "system_answer": "Based on the HR documentation, the company's PTO (Paid Time Off) policy is as follows:\n\n• PTO accrual is based on years of service:\n  - 0-2 years: 15 days annually (1.25 days per month)\n  - 3-5 years: 20 days annually (1.67 days per month) \n  - 6+ years: 25 days annually (2.08 days per month)\n\n• PTO must be requested at least 2 weeks in advance for non-emergency situations\n• Maximum carryover is 40 hours into the next calendar year\n• PTO accrual begins immediately but cannot be used until after 60 days of employment",
+    "chunks_related": [
+      {
+        "chunk_id": "qa_4",
+        "chunk_type": "qa_pair",
+        "similarity_score": 0.9234,
+        "bm25_score": 12.5,
+        "vector_similarity": 0.8934,
+        "rrf_score": 0.8756,
+        "topic_category": "time_off",
+        "content_preview": "Q: How is paid time off calculated and tracked?\nA: PTO is accrued monthly based on years of service. Employees with 0-2 years receive 15 days annually (1.25 days per month), 3-5 years receive 20 days (1.67 days per month), and 6+ years receive 25 days (2.08 days per month). PTO must be requested at least 2 weeks in advance for non-emergency situations. Maximum carryover is 40 hours into the next calendar year.",
+        "token_count": 89
+      },
+      {
+        "chunk_id": "topic_benefits_and_compensation_1",
+        "chunk_type": "topic_section",
+        "similarity_score": 0.8756,
+        "bm25_score": 8.3,
+        "vector_similarity": 0.8234,
+        "rrf_score": 0.7892,
+        "topic_category": "benefits",
+        "content_preview": "Health insurance coverage begins on the first day of the month following your start date, provided you've completed enrollment within 30 days. Dental and vision coverage follows the same timeline. 401(k) eligibility begins immediately, but company matching starts after 6 months of employment. PTO accrual begins immediately but cannot be used until after 60 days of employment.",
+        "token_count": 67
+      }
+    ],
+    "metadata": {
+      "chunks_used": 2,
+      "generation_tokens": {
+        "input": 456,
+        "output": 123
+      },
+      "generation_cost": 0.001834,
+      "confidence": 0.8995,
+      "search_cost": 0.000012,
+      "total_cost": 0.001846,
+      "latency": {
+        "search_ms": 24.5,
+        "generation_ms": 1247.8,
+        "total_ms": 1272.3
+      },
+      "timestamp": "2024-11-16T10:30:45.123456"
+    }
+  },
+  {
+    "user_question": "How do I set up direct deposit?",
+    "system_answer": "To set up direct deposit, you need to provide your direct deposit information as part of your onboarding documentation. According to the company policy:\n\n• Direct deposit information must be submitted within 3 business days of your start date\n• Direct deposit is strongly encouraged for payroll\n• Payroll runs on a bi-weekly schedule with pay dates every other Friday\n• Direct deposits typically process by 8 AM on payday\n\nIf you need to update your direct deposit information after onboarding, you should contact HR or payroll to make the necessary changes.",
+    "chunks_related": [
+      {
+        "chunk_id": "qa_1",
+        "chunk_type": "qa_pair",
+        "similarity_score": 0.8923,
+        "content_preview": "Q: What documents do I need to provide for onboarding?\nA: New employees must provide a valid government-issued ID, Social Security card or work authorization document, completed I-9 form, direct deposit information, emergency contact details, and signed company handbook acknowledgment...",
+        "token_count": 78
+      },
+      {
+        "chunk_id": "qa_7",
+        "chunk_type": "qa_pair",
+        "similarity_score": 0.8645,
+        "content_preview": "Q: What are the standard pay periods and payroll schedule?\nA: We operate on a bi-weekly payroll schedule with pay dates every other Friday. Time sheets must be submitted by 5 PM on Monday following the end of each pay period. Direct deposit is strongly encouraged and typically processes by 8 AM on payday. Paper checks are available but must be picked up from HR by 3 PM on payday.",
+        "token_count": 71
+      }
+    ],
+    "metadata": {
+      "chunks_used": 2,
+      "generation_tokens": {
+        "input": 387,
+        "output": 98
+      },
+      "generation_cost": 0.001523,
+      "confidence": 0.8784,
+      "search_cost": 0.000011,
+      "total_cost": 0.001534,
+      "latency": {
+        "search_ms": 19.2,
+        "generation_ms": 1034.7,
+        "total_ms": 1053.9
+      },
+      "timestamp": "2024-11-16T10:32:18.456789"
+    }
+  },
+  {
+    "user_question": "What happens if I work more than 40 hours in a week?",
+    "system_answer": "If you work more than 40 hours per week as an hourly employee, you will receive overtime pay. Here are the key details:\n\n• Any time worked over 40 hours per week is considered overtime\n• Overtime is paid at 1.5 times your regular hourly rate\n• All overtime must be pre-approved by your supervisor before you work the additional hours\n• You must use the TimeTracker system to properly clock in and out for all hours worked\n\nIt's important to get supervisor approval before working overtime to ensure proper authorization and budget compliance.",
+    "chunks_related": [
+      {
+        "chunk_id": "qa_8",
+        "chunk_type": "qa_pair",
+        "similarity_score": 0.9456,
+        "content_preview": "Q: How do I report time for hourly employees?\nA: Hourly employees must use the TimeTracker system to clock in and out. Break times of 15 minutes or less are paid and don't require clocking out. Lunch breaks of 30 minutes or more must be clocked out. Any overtime (over 40 hours per week) must be pre-approved by your supervisor and will be paid at 1.5x regular rate.",
+        "token_count": 73
+      },
+      {
+        "chunk_id": "topic_payroll_and_timekeeping_0",
+        "chunk_type": "topic_section",
+        "similarity_score": 0.7834,
+        "content_preview": "We operate on a bi-weekly payroll schedule with pay dates every other Friday. Time sheets must be submitted by 5 PM on Monday following the end of each pay period. Direct deposit is strongly encouraged and typically processes by 8 AM on payday. Paper checks are available but must be picked up from HR by 3 PM on payday.",
+        "token_count": 58
+      }
+    ],
+    "metadata": {
+      "chunks_used": 2,
+      "generation_tokens": {
+        "input": 298,
+        "output": 86
+      },
+      "generation_cost": 0.001367,
+      "confidence": 0.8645,
+      "search_cost": 0.00001,
+      "total_cost": 0.001377,
+      "latency": {
+        "search_ms": 21.8,
+        "generation_ms": 967.4,
+        "total_ms": 989.2
+      },
+      "timestamp": "2024-11-16T10:35:42.789012"
+    }
+  }
+]
