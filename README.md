@@ -39,6 +39,9 @@ export OPENAI_API_KEY="your-openai-api-key-here"
 ```bash
 # Process the FAQ document and build vector index
 python -m src.build_index --document data/faq_document.txt
+
+# Incase the index exists and you want to rebuild the index forcefully
+python -m src.build_index --document data/faq_document.txt --force
 ```
 
 ### 4. Start Asking Questions
@@ -123,6 +126,7 @@ python -m src.query "What is the probationary period for new employees?"
 {
   "user_question": "What is the probationary period for new employees?",
   "system_answer": "The standard probationary period is 90 days for all full-time employees and 60 days for part-time employees...",
+  "sources": [] // additional citing to catch hallucinations
   "chunks_related": [
     {
       "chunk_id": "qa_1",
@@ -302,14 +306,10 @@ This project uses:
 
 ### Optimization Strategies
 
-1. **Embedding Caching**: Cache query embeddings for repeated questions
+1. **Embedding Caching**: Cache query embeddings for repeated questions and to save cost of calling the api for repeated questions
 2. **Chunk Reranking**: Use cheaper reranking instead of larger embeddings
 3. **Model Selection**: Balance cost vs. quality for your use case
 4. **Batch Processing**: Group multiple queries when possible
-
-## License
-
-This project is for educational and internal use. Please ensure compliance with OpenAI's usage policies and your organization's data handling requirements.
 
 ## Support
 
@@ -322,10 +322,12 @@ For technical issues or questions:
 
 ## Changelog
 
-### v1.0.0
-
 - Initial implementation with multi-strategy chunking
 - Vector search with cosine similarity
 - Cost tracking and safety limits
 - Quality evaluation agent
 - Comprehensive test suite and documentation
+
+## Author
+
+This code was written by Asoh Emmanuel Kaego (Devops/MLOps AI Engineer)
