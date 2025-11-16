@@ -21,7 +21,7 @@ if _env:
                 if "cached_input" in v:
                     nv["cached_input"] = float(v["cached_input"])
                 PRICING[k] = nv
-    except (json.JSONDecodeError, ValueError, TypeError, KeyError):
+    except (ValueError, TypeError, KeyError):
         pass
 
 

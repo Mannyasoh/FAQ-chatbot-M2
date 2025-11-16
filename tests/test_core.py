@@ -4,14 +4,14 @@ import tempfile
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-import pytest  # noqa: E402
+import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.chunking import TextChunker  # noqa: E402
-from src.config import RAGConfig  # noqa: E402
-from src.costs import estimate_cost_usd, estimate_embedding_cost  # noqa: E402
-from src.metrics import MetricsCollector, SafetyLimits  # noqa: E402
+from src.chunking import TextChunker
+from src.config import RAGConfig
+from src.costs import estimate_cost_usd, estimate_embedding_cost
+from src.metrics import MetricsCollector, SafetyLimits
 
 
 class TestConfig:

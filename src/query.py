@@ -3,23 +3,20 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import argparse  # noqa: E402
-import json  # noqa: E402
-import time  # noqa: E402
-from datetime import datetime  # noqa: E402
-from pathlib import Path  # noqa: E402
-from typing import Any, Dict  # noqa: E402
+import argparse
+import json
+import time
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict
 
-import openai  # noqa: E402
-from loguru import logger  # noqa: E402
+import openai
+from loguru import logger
 
-from src.config import RAGConfig  # noqa: E402
-from src.generator import AnswerGenerator  # noqa: E402
-from src.hybrid_search import HybridSearchStore  # noqa: E402
-from src.metrics import MetricsCollector  # noqa: E402
-from src.metrics import QueryMetrics  # noqa: E402
-from src.metrics import SafetyLimits  # noqa: E402
-from src.metrics import time_function  # noqa: E402; noqa: E402
+from src.config import RAGConfig
+from src.generator import AnswerGenerator
+from src.hybrid_search import HybridSearchStore
+from src.metrics import MetricsCollector, QueryMetrics, SafetyLimits, time_function
 
 logger.add("logs/query.log", rotation="10 MB", level="INFO", serialize=True)
 logger.add("logs/query_error.log", rotation="10 MB", level="ERROR", serialize=True)

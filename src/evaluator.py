@@ -3,16 +3,16 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import argparse  # noqa: E402
-import json  # noqa: E402
-from typing import Any, Dict, List  # noqa: E402
+import argparse
+import json
+from typing import Any, Dict, List
 
-import openai  # noqa: E402
-from loguru import logger  # noqa: E402
-from openai import OpenAI  # noqa: E402
+import openai
+from loguru import logger
+from openai import OpenAI
 
-from src.config import RAGConfig  # noqa: E402
-from src.costs import estimate_cost_usd  # noqa: E402
+from src.config import RAGConfig
+from src.costs import estimate_cost_usd
 
 logger.add("logs/evaluator.log", rotation="10 MB", level="INFO", serialize=True)
 logger.add("logs/evaluator_error.log", rotation="10 MB", level="ERROR", serialize=True)
@@ -31,7 +31,6 @@ class AnswerEvaluator:
             with open(prompt_file, "r") as f:
                 return f.read().strip()
         except FileNotFoundError:
-            # Fallback prompt if file doesn't exist
             return (
                 "You are an expert evaluator. Rate RAG responses 0-10 based on: "
                 "RELEVANCE (0-3), ACCURACY (0-4), COMPLETENESS (0-2), CLARITY (0-1). "

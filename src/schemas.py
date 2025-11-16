@@ -3,10 +3,10 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from datetime import datetime  # noqa: E402
-from typing import Any, Dict, List, Optional  # noqa: E402
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field  # noqa: E402
+from pydantic import BaseModel, Field
 
 
 class SourceCitation(BaseModel):

@@ -3,17 +3,17 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from datetime import datetime  # noqa: E402
-from typing import Any, Dict, List, Tuple  # noqa: E402
+from datetime import datetime
+from typing import Any, Dict, List, Tuple
 
-import openai  # noqa: E402
-import tiktoken  # noqa: E402
-from loguru import logger  # noqa: E402
-from openai import OpenAI  # noqa: E402
+import openai
+import tiktoken
+from loguru import logger
+from openai import OpenAI
 
-from src.config import RAGConfig  # noqa: E402
-from src.costs import estimate_cost_usd  # noqa: E402
-from src.schemas import QueryMetadata, RAGResponse, SourceCitation  # noqa: E402
+from src.config import RAGConfig
+from src.costs import estimate_cost_usd
+from src.schemas import QueryMetadata, RAGResponse, SourceCitation
 
 logger.add("logs/generator.log", rotation="10 MB", level="INFO", serialize=True)
 logger.add("logs/generator_error.log", rotation="10 MB", level="ERROR", serialize=True)

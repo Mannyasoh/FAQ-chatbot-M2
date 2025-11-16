@@ -3,17 +3,17 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import argparse  # noqa: E402
-from pathlib import Path  # noqa: E402
+import argparse
+from pathlib import Path
 
-import openai  # noqa: E402
-from loguru import logger  # noqa: E402
+import openai
+from loguru import logger
 
-from src.chunking import TextChunker  # noqa: E402
-from src.config import RAGConfig  # noqa: E402
-from src.costs import estimate_embedding_cost  # noqa: E402
-from src.hybrid_search import HybridSearchStore  # noqa: E402
-from src.metrics import SafetyLimits  # noqa: E402
+from src.chunking import TextChunker
+from src.config import RAGConfig
+from src.costs import estimate_embedding_cost
+from src.hybrid_search import HybridSearchStore
+from src.metrics import SafetyLimits
 
 logger.add("logs/build_index.log", rotation="10 MB", level="INFO", serialize=True)
 logger.add("logs/build_error.log", rotation="10 MB", level="ERROR", serialize=True)
